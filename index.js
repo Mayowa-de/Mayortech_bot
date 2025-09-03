@@ -88,7 +88,7 @@ async function startBot() {
 
             //Send QR as image to admin
             try{
-                const qrImage = await qrcode.toBuffer(qr, {scale: 8});
+                const qrImage = await qrcode.toBuffer(qr, {scale: 2});
                 await sock.sendMessage(ADMIN_NUMBER, {
                     image: qrImage,
                     caption: 'Scan this QR to authenticate the bot.',
